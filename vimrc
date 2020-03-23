@@ -80,3 +80,7 @@ set foldlevel=99
 syntax enable
 colorscheme monokai
 
+" Hide scroll bars in macvim
+set guioptions=
+set guifont=Hack:h13
+
