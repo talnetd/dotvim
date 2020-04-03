@@ -66,6 +66,14 @@ set listchars=tab:▸\ ,eol:¬
 " Or use your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
+" Ctrl+n will close the nerdtree
+map <C-n> :NERDTreeToggle<CR>
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" arrows baby
+let g:NERDTreeDirArrowExpandable = '⇀'
+let g:NERDTreeDirArrowCollapsible = '⇂'
+
 " Color scheme (terminal)
 set t_Co=256
 set background=dark
@@ -78,9 +86,18 @@ set foldlevel=99
 
 
 syntax enable
-colorscheme monokai
+colorscheme github
 
 " Hide scroll bars in macvim
 set guioptions=
 set guifont=Hack:h13
 
+" map tab nav
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
+
+" Custom Key Mapped
+" space to fold the code
+nnoremap <space> za 
