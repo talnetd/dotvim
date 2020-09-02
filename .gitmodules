@@ -13,3 +13,12 @@
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = git@github.com:terryma/vim-multiple-cursors.git
+[submodule "bundle/vim-codefmt"]
+	path = bundle/vim-codefmt
+	url = git@github.com:google/vim-codefmt.git
+[submodule "bundle/vim-maktaba"]
+	path = bundle/vim-maktaba
+	url = git@github.com:google/vim-maktaba.git
+[submodule "bundle/kotlin-vim"]
+	path = bundle/kotlin-vim
+	url = https://github.com/udalov/kotlin-vim
